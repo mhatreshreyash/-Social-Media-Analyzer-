@@ -1,4 +1,12 @@
 import streamlit as st
+
+try:
+    import feedparser
+    st.success("feedparser loaded successfully")
+except ImportError:
+    st.error("feedparser is not installed!")
+
+import streamlit as st
 import feedparser
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
